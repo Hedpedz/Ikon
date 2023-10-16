@@ -5,7 +5,7 @@ body{
 #grid-container{
     display: grid;
     grid-template-areas: "header" "main" "footer";
-    padding: 1rem;
+    padding: 2rem;
 }
 
 header{
