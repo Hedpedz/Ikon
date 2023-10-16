@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css" type="text/css">
+
         <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
         <link rel="stylesheet" href="css/font/css/fontawesome.css" rel="stylesheet">
         <link rel="stylesheet" href="css/font/css/brands.css" rel="stylesheet">
@@ -12,32 +12,42 @@
         <title>Bolle</title>
     </head>
     <body>
+        <div id="grid-container">
         <header>
             <nav>
                 <a href="#" id="logo">Logo</a>
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <i class="fa-solid fa-bars"></i>
-                <ul>
+                <div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i id="ham" class="fa-solid fa-bars"></i>
+                </div>
+                
+                <ul class="navbar">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Products</a></li>
                     <li><a href="#">About</a></li>
-                    
+
                 </ul>
             </nav>
+
             <section>
                 <h1>Bolle</h1>
                 <a href="#" class="black-btn">Read more</a>
             </section>
         </header>
         <main>
-            <section>
-                <img src="" alt="">
-                <h2>Lorem ipsum</h2>
-                <p>Nulla quis erat eu lorem hendrerit maximus sit amet eget massa.</p>
+            <section class="flex-section right">
+                <img src="https://placehold.co/600x400" alt="Grå placeholer bilde">
+                <section>
+                    <h2>Lorem ipsum</h2>
+                    <p>Nulla quis erat eu lorem hendrerit maximus sit amet eget massa.</p>
+                </section>
             </section>
-            <section>
-                <h2>Lorem ipsum</h2>
-                <p>Duis non augue quis arcu placerat viverra fringilla sit amet tellus.</p>
+            <section class="flex-section">
+                <img src="https://placehold.co/600x400" alt="Grå placeholder bilde">
+                <section>
+                    <h2>Lorem ipsum</h2>
+                    <p>Duis non augue quis arcu placerat viverra fringilla sit amet tellus.</p>
+                </section>
             </section>
             <section>
                 <h2>Services</h2>
@@ -55,6 +65,23 @@
                 </article>
             </section>
         </main>
+        <footer>
+
+        </footer>
+        <div>
+        <script>
+
+            let x = document.querySelector(".navbar")
+
+            document.getElementById("ham").addEventListener("click", (e) =>{
+                if (x.className === "navbar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navbar";
+                }
+            })
+
+        </script>
     </body>
 
 </html>
