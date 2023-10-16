@@ -77,7 +77,29 @@ footer{
     grid-area: footer;
 }
 
+#services{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #efefef;
+    padding: 1rem 0;
+    justify-content: space-around;
+}
+
+#services h2{
+    width: 100%;
+    text-align: center;
+}
+#services article{
+    max-width: 300px;
+    width: 100px;
+    min-width: 200px;
+}
+
 @media only screen and (min-width: 600px){
+    #grid-container{
+        grid-template-areas: "header header header" "main main main" "footer footer footer" ;
+    }
     .navbar{
         display: flex;
         flex-direction: row;
@@ -93,6 +115,7 @@ footer{
     .flex-section{
         display: flex;  
         flex-direction: row;
+        justify-content: space-between;
     }
 
     .flex-section img{
@@ -100,10 +123,14 @@ footer{
     }
 
     .flex-section section{
+        padding: 1rem;
+        width: 40%;
         align-self: center;
     }
 
     .right img{
         order:1;
     }
+
+
 }
